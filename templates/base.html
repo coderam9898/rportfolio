@@ -1,0 +1,38 @@
+
+<!-- {% load django_hide %} -->
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://edusastra.com/static/assets/images/logo_s.svg">
+    <link rel="apple-touch-icon" href="https://edusastra.com/static/assets/images/logo_s.svg">
+    <!-- Theme CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="{% static 'assets/js/tailwincss.js'%}"></script> -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="script-src 'none'"> -->
+    {% block meta%} {% endblock %}
+    {% block css %}{%endblock%}
+    {% block cdn %}{%endblock%}
+    {% block pdfcdn %}{%endblock%}
+    
+    
+
+    <title> Ramkumar-{% block title %}{% endblock %}</title>
+</head>
+<body>
+  
+{% include 'components/header.html' %}
+    {% block content %} {% endblock %}
+{% include 'components/footer.html' %}
+    <!-- JAVASCRIPT
+    ================================================== -->
+    <!-- <script src="{% static 'assets/js/block_inspect.js'%}"></script> -->
+    {% block script%}{% endblock%}
+</body>
+</html>
